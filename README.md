@@ -15,8 +15,13 @@ deposit(t, n) = n * t
 
 Formula for calculating the total amount that is going to have been saved on week t given a principal amount n
 
+```
 weekSaving(t, n) = n * t * (1 + t) / 2
+```
+
 
 Formula for calculating the total amount that is going to have been saved on the 52nd week given a principal amount n
 
+```
 totalSavings(n) = n * 26 * 53
+```
