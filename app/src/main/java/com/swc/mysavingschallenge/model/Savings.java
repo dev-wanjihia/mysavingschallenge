@@ -8,6 +8,10 @@ public class Savings {
     public Savings() {
     }
 
+    /**
+     * @param principal Initial amount that is going to be saved at the
+     * @param total     Total amount that is going to have been saved
+     */
     public Savings(int principal, float total) {
         this.principal = principal;
         this.total = total;

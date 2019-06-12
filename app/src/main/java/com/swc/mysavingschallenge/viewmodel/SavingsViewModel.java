@@ -14,6 +14,12 @@ public class SavingsViewModel {
     private boolean hasErrors = false;
     private String errors = "";
 
+    public SavingsViewModel() {
+    }
+
+    /**
+     * @param activityMainBinding Binding to the user interface so that the view model can provide the link between the view and the model
+     */
     public SavingsViewModel(final ActivityMainBinding activityMainBinding) {
         weeklySavingsAdapter = new WeeklySavingsAdapter(this);
 
@@ -64,22 +70,40 @@ public class SavingsViewModel {
         this.errors = "";
     }
 
+    /**
+     * @return savings Savings model from which principal can be exposed for access
+     */
     public Savings getSavings() {
         return savings;
     }
 
+    /**
+     * @param savings Set the savings model for the principal
+     */
     public void setSavings(Savings savings) {
         this.savings = savings;
     }
 
+    /**
+     * @return The total amount that is going to be saved after the 52 weeks
+     */
     public float getTotalSavings() {
         return (savings.getPrincipal() * 52 * 53 / 2f);
     }
 
+
+    /**
+     * @param weekNumber Week for which to find the deposit
+     * @return Amount that the user is going to deposit on weekNumber
+     */
     public int getWeekDeposit(int weekNumber) {
         return weekNumber * savings.getPrincipal();
     }
 
+    /**
+     * @param weekNumber Week for which to find the deposit
+     * @return Total amount the is going to have beem deposited
+     */
     public float getWeekTotal(int weekNumber) {
         return savings.getPrincipal() * weekNumber * (weekNumber + 1) / 2f;
     }

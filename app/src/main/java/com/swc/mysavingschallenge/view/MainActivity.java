@@ -1,9 +1,10 @@
-package com.swc.mysavingschallenge;
+package com.swc.mysavingschallenge.view;
 
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.swc.mysavingschallenge.R;
 import com.swc.mysavingschallenge.databinding.ActivityMainBinding;
 import com.swc.mysavingschallenge.viewmodel.SavingsViewModel;
 
