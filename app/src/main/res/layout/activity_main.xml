@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="savingsViewModel"
+            type="com.swc.mysavingschallenge.viewmodel.SavingsViewModel" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/activity_main_instruction"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            android:scaleType="centerInside"
+            android:src="@drawable/piggy_town" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/activity_main_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/activity_main_principal_amount"
+            android:layout_centerHorizontal="true"
+            android:text="@string/how_much" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/activity_main_principal_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="@string/initial_amount"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/principal_input_text_size" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_main_principal_amount"
+            android:layout_margin="@dimen/margin_medium">
+
+            <android.support.v7.widget.CardView
+                style="@style/SavingBreakdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/margin_small"
+                app:cardElevation="@dimen/margin_small">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="@{savingsViewModel.hasErrors() ? View.INVISIBLE : View.VISIBLE}">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:text="@string/total"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:text='@{"Kes. " + savingsViewModel.totalSavings }'
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            tools:text="Kes. 50" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/activity_main_weeks_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="@{savingsViewModel.hasErrors() ? View.VISIBLE : View.INVISIBLE}">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            app:srcCompat="@drawable/ic_error_outline_black_24dp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@{savingsViewModel.getErrors()}" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

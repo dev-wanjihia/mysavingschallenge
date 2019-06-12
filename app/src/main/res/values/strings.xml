@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MySavingsChallenge</string>
+    <string name="initial_amount">0</string>
+    <string name="how_muchs">How much do you want to start with?</string>
+    <string name="start_saving">Start Saving</string>
+    <string name="total">Total:</string>
+    <string name="how_much">How much do you want to save?</string>
+</resources>
