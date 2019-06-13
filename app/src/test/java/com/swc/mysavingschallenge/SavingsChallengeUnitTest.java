@@ -46,6 +46,5 @@ public class SavingsChallengeUnitTest {
 
         assertEquals(68900f, savingsViewModel.getTotalSavings(), 0.0f);
     }
-
-
+    
 }
