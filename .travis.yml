@@ -3,5 +3,17 @@ language: android
 
 android:
   components:
-    - build-tools-28.0.0
+    - tools
+    - build-tools-28.0.3
+    - extra-android-support
+    - extra-google-m2repository
+    - extra-android-2repository
 
+licenses:
+  -'android-sdk-license-.+'
+
+before_install:
+  - yes | sdkmanager "platforms;android-28"'
+
+script:
+  - ./gradlew clean ktlint test
