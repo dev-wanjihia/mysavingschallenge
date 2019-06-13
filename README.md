@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dev-wanjihia/mysavingschallenge.svg?branch=master)](https://travis-ci.org/dev-wanjihia/mysavingschallenge)
+
 # Safaricom 52 Week Savings Challenge
 
 
