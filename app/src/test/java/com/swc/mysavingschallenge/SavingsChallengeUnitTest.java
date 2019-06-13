@@ -13,10 +13,6 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class SavingsChallengeUnitTest {
-    @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
-    }
 
     @Test
     public void weeklyDepositIsCorrect() {
@@ -50,4 +46,6 @@ public class SavingsChallengeUnitTest {
 
         assertEquals(68900f, savingsViewModel.getTotalSavings(), 0.0f);
     }
+
+
 }
