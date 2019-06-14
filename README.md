@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/dev-wanjihia/mysavingschallenge.svg?branch=master)](https://travis-ci.org/dev-wanjihia/mysavingschallenge)
-
-[![codecov](https://codecov.io/gh/dev-wanjihia/mysavingschallenge/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-wanjihia/mysavingschallenge)
+[![Build Status](https://travis-ci.org/dev-wanjihia/mysavingschallenge.svg?branch=master)](https://travis-ci.org/dev-wanjihia/mysavingschallenge) [![codecov](https://codecov.io/gh/dev-wanjihia/mysavingschallenge/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-wanjihia/mysavingschallenge)
 
 # Safaricom 52 Week Savings Challenge
 
