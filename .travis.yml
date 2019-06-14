@@ -24,5 +24,4 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 script:
-  - ./gradlew build jacocoTestReport assembleAndroidTest
-  - ./gradlew clean test
+  - ./gradlew clean test build jacocoTestReport assembleAndroidTest
