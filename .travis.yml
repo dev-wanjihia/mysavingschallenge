@@ -1,5 +1,7 @@
 language: android
-
+env:
+  global:
+    - CODECOV_TOKEN = 18f04d95-4404-4b3b-b805-d69c4f9a21c9
 
 android:
   components:
@@ -19,6 +21,8 @@ before_install:
 
 after_success:
   - codecov
+  - bash <(curl -s https://codecov.io/bash)
 
 script:
+  - ./gradlew build jacocoTestReport assembleAndroidTest
   - ./gradlew clean test
