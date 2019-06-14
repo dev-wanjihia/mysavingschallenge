@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/dev-wanjihia/mysavingschallenge.svg?branch=master)](https://travis-ci.org/dev-wanjihia/mysavingschallenge)
 
+[![codecov](https://codecov.io/gh/dev-wanjihia/mysavingschallenge/branch/master/graph/badge.svg)](https://codecov.io/gh/dev-wanjihia/mysavingschallenge)
+
 # Safaricom 52 Week Savings Challenge
 
 
@@ -13,7 +15,9 @@ Determining the amount that one is required to save on a particular week.
 
 Formula for calculating amount to deposit on week t given that the principal amount is n
 
+```
 deposit(t, n) = n * t
+```
 
 Formula for calculating the total amount that is going to have been saved on week t given a principal amount n
 
